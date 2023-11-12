@@ -25,8 +25,8 @@ const useCarousel = () => {
         const info1 = json?.data?.cards[1]?.card?.card?.imageGridCards?.info || []
         setImageIds1(info1.map((item) => item.imageId));
 
-        // const topRestaurentInfo = json?.data?.cards[2]?.card || []
-        setRestaurantInfo(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+       const topRestaurentInfo = json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []
+       setRestaurantInfo(topRestaurentInfo);
     }
 
     return {  imageIds, imageIds1, restaurantInfo };
